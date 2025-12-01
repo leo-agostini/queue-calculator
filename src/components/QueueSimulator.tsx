@@ -1,3 +1,4 @@
+import { ComparisonCharts } from "@/components/ComparisonCharts";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -387,10 +388,12 @@ export function QueueSimulator() {
               <CardHeader>
                 <CardTitle>Comparação de Simulações</CardTitle>
                 <CardDescription>
-                  Comparação lado a lado dos indicadores de performance
+                  Visualização gráfica e tabela comparativa dos indicadores
                 </CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-6">
+                <ComparisonCharts simulations={getComparisons()} />
+
                 <div className="overflow-x-auto">
                   <Table>
                     <TableHeader>
